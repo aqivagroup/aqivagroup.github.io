@@ -1,86 +1,92 @@
+
+/* Global Styles */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  background: rgba(0,0,0,0.4);
+    background-color: #1E3A8A;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-header h1 {
-  font-size: 1.5rem;
-  color: #f0c75e;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    color: #1E3A8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
 }
 nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
-nav a:hover { color: #f0c75e; }
-.hero {
-  text-align: center;
-  padding: 100px 20px;
+nav a:hover {
+    color: #FBBF24;
 }
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #f0c75e;
+section {
+    padding: 80px 40px;
+    text-align: center;
 }
-.btn {
-  padding: 12px 30px;
-  margin: 10px;
-  border: none;
-  border-radius: 25px;
-  background: #f0c75e;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #1E3A8A;
 }
-.btn:hover { background: #fff; color: #000; }
-section { padding: 60px 20px; text-align: center; }
-section h2 { color: #f0c75e; margin-bottom: 30px; }
-.dealerships { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-.card {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
-  width: 280px;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
 }
-.gallery img {
-  width: 250px;
-  border-radius: 15px;
-  margin: 10px;
+.poster-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
-.contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: auto;
+.poster {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 2px dashed #1E3A8A;
+    border-radius: 8px;
 }
-.contact input, .contact textarea {
-  margin: 10px 0;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
+.content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
 }
-.contact button {
-  padding: 12px;
-  background: #f0c75e;
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-}
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0,0,0,0.6);
-  font-size: 0.9rem;
+@media(max-width: 768px){
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav a {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 }
