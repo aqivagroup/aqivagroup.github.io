@@ -1,13 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AQIVA GROUP</title>
-  <link rel="stylesheet" href="style.css">
+    <title>AQIVA GROUP</title>
+    <style>
+        /* Reset default margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #1E3A8A; /* Dark blue */
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo and company name container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Logo placeholder */
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff; /* placeholder color */
+            color: #1E3A8A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+
+        /* Company name next to logo */
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Navigation menu */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FBBF24; /* Yellow on hover */
+        }
+
+        /* Responsive for small screens */
+        @media(max-width: 768px){
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 10px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
   <header>
+    <!-- Logo and company name -->
+    <div class="logo-container">
+        <div class="logo">LOGO</div>
+        <div class="company-name">AQIVA GROUP</div>
+    </div>
+
+    <!-- Navigation menu -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#dealerships">Dealerships</a>
+        <a href="#why">Why Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <h1>AQIVA GROUP</h1>
     <nav>
       <a href="#about">About</a>
