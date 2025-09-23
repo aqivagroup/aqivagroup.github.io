@@ -44,6 +44,10 @@ header {
     color: #457038;
     font-weight: normal;
 }
+.company-text {
+    display: flex;
+    flex-direction: column;
+}
 .company-name {
     font-family: "Times New Roman", serif;
     font-weight: bold;
