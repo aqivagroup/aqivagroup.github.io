@@ -12,7 +12,7 @@ body {
 
 /* Header */
 header {
-  background-color: rgba(30, 58, 138, 0.9);
+  background-color: rgba(245, 160, 69, 0.2);
   color: white;
   padding: 15px 40px;
   display: flex;
@@ -45,12 +45,13 @@ header {
   font-family: "Times New Roman", serif;
   font-weight: bold;
   font-size: 24px;
+  color: #22319e;
 }
 
 .tagline {
   font-family: "Pristina", cursive;
-  font-size: 8px; /* ~30% of logo size */
-  color: #457038;
+  font-size: 12px; /* ~30% of logo size */
+  color: #f5d533;
 }
 
 /* Embossed Navigation Buttons */
@@ -77,8 +78,11 @@ section {
   min-height: 100vh;
   padding: 80px 40px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8); /* transparent white */
-  margin: 0;
+  background-color: rgba(255, 255, 255, 0.4); /* transparent paper effect */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);    /* subtle shadow for paper */
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 900px;
 }
 
 section h2 {
