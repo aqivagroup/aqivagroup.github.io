@@ -46,6 +46,8 @@ header {
   font-weight: bold;
   font-size: 24px;
   color: #22319e;
+  -webkit-text-stroke: 1px #fff; /* Chrome/Safari/Edge */
+  text-stroke: 1px #fff;         /* harmless fallback */
 }
 
 .tagline {
@@ -63,13 +65,13 @@ nav a.nav-btn {
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 6px;
-  background: linear-gradient(145deg, #223d96, #1b3178);
-  box-shadow: 3px 3px 6px #16285f, -3px -3px 6px #2a48b3;
+  background: linear-gradient(145deg, #223d96, #3c3ab4);
+  box-shadow: 3px 3px 6px #ffffff, -3px -3px 6px #2a48b3;
   transition: all 0.3s ease;
 }
 
 nav a.nav-btn:hover {
-  background: linear-gradient(145deg, #1b3178, #223d96);
+  background: linear-gradient(145deg, #1b3178, #3d2aba);
   box-shadow: inset 2px 2px 4px #16285f, inset -2px -2px 4px #2a48b3;
   color: #FBBF24;
 }
@@ -79,7 +81,7 @@ nav a.nav-btn:hover {
   background: none;
   border: none;
   font-size: 24px;
-  color: #22319e;
+  color: #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
