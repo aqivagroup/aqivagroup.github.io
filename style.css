@@ -74,16 +74,60 @@ nav a.nav-btn:hover {
   color: #FBBF24;
 }
 
+/* Mobile-first responsive header/nav */
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #22319e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.main-nav {
+  display: none; /* shown via JS on small screens */
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-top: 12px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease, opacity 200ms ease;
+  opacity: 0;
+}
+
+/* Make nav buttons full-width on small screens */
+nav a.nav-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+}
+
+.main-nav.open {
+  display: flex;
+  max-height: 480px; /* large enough for nav items */
+  opacity: 1;
+}
+
+/* Fluid images */
+.logo-image {
+  max-width: 90px;
+  width: 18vw;
+  height: auto;
+}
+
 /* Sections */
 section {
   min-height: 100vh;
-  padding: 80px 40px;
+  padding: 56px 16px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.4); /* transparent paper effect */
+  background-color: rgba(255, 255, 255, 0.9); /* more opaque on small screens */
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);    /* subtle shadow for paper */
-  border-radius: 16px;
-  margin: 40px auto;
-  max-width: 900px;
+  border-radius: 12px;
+  margin: 20px 16px;
 }
 
 section h2 {
@@ -102,4 +146,19 @@ section h2 {
   width: 100%;
   border: 2px solid #1E3A8A;
   border-radius: 8px;
+}
+
+/* Desktop / larger screens */
+@media (min-width: 768px) {
+  .nav-toggle { display: none; }
+  .main-nav { display: flex !important; flex-direction: row; gap: 12px; align-items: center; width: auto; margin: 0; max-height: none; opacity: 1; overflow: visible; }
+  nav a.nav-btn { display: inline-block; width: auto; padding: 8px 16px; }
+  header { padding: 15px 40px; }
+  .logo-image { width: 90px; height: 60px; }
+  section { margin: 40px auto; max-width: 900px; padding: 80px 40px; background-color: rgba(255,255,255,0.7); }
+}
+
+/* Disable fixed background on narrow screens for better performance */
+@media (max-width: 767px) {
+  body { background-attachment: scroll; }
 }
