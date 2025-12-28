@@ -150,6 +150,72 @@ section h2 {
   border-radius: 8px;
 }
 
+/* Dealership image boxes: fixed physical size (3in x 2in) with blue border */
+.dealership-img {
+  width: 3in;
+  height: 2in;
+  object-fit: cover;
+  border: 3px solid #1e90ff; /* blue border */
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Dealership gallery: force 3 columns on larger screens, responsive down to 2/1 */
+.dealership-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 in a row */
+  gap: 16px;
+  margin-top: 16px;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Ensure each figure box centers and uses the fixed physical size */
+.dealership-gallery figure {
+  margin: 0;
+  width: 3in; /* keeps the 3in physical width for layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image box (keeps your 3in x 2in size) */
+.dealership-img {
+  width: 3in;
+  height: 2in;
+  object-fit: cover;
+  border: 3px solid #1e90ff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: block;
+  cursor: zoom-in;
+}
+
+/* Responsive breakpoints: 2 columns on medium, 1 on small */
+@media (max-width: 900px) {
+  .dealership-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dealership-gallery figure,
+  .dealership-img {
+    width: 100%;
+    height: auto;
+    max-width: 320px; /* optional cap so images don't get huge */
+  }
+}
+
+@media (max-width: 420px) {
+  .dealership-gallery {
+    grid-template-columns: 1fr;
+  }
+  .dealership-img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
 /* Desktop / larger screens */
 @media (min-width: 768px) {
   .nav-toggle { display: none; }
@@ -158,6 +224,14 @@ section h2 {
   header { padding: 15px 40px; }
   .logo-image { width: 90px; height: 60px; }
   section { margin: 40px auto; max-width: 900px; padding: 80px 40px; background-color: rgba(255,255,255,0.7); }
+}
+
+/* Keep grid responsive on very small screens */
+@media (max-width: 420px) {
+  .dealership-img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Disable fixed background on narrow screens for better performance */
