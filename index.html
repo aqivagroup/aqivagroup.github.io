@@ -54,55 +54,66 @@
 
     <div class="dealership-gallery">
       <figure>
-        <img src="images/GrandLaunch.jpg" alt="Grand Launch" class="dealership-img">
+        <img src="images/GrandLaunch.jpg" data-full="images/GrandLaunch.jpg" alt="Grand Launch" class="dealership-img">
         <figcaption>Grand Launch</figcaption>
       </figure>
       <figure>
-        <img src="images/LaunchAmpere.jpg" alt="Launch Ampere" class="dealership-img">
+        <img src="images/LaunchAmpere.jpg" data-full="images/LaunchAmpere.jpg" alt="Launch Ampere" class="dealership-img">
         <figcaption>Launch AMPERE</figcaption>
       </figure>
       <figure>
-        <img src="images/LaunchOben.jpg" alt="Launch Oben" class="dealership-img">
+        <img src="images/LaunchOben.jpg" data-full="images/LaunchOben.jpg" alt="Launch Oben" class="dealership-img">
         <figcaption>Launch OBEN</figcaption>
       </figure>
       <figure>
-        <img src="images/ShowroomOutside.jpg" alt="Showroom Outside" class="dealership-img">
+        <img src="images/ShowroomOutside.jpg" data-full="images/ShowroomOutside.jpg" alt="Showroom Outside" class="dealership-img">
         <figcaption>Showroom Outside</figcaption>
       </figure>
       <figure>
-        <img src="images/launch1.jpg" alt="Vehicle launch Ampere" class="dealership-img">
-        <figcaption>Vehicle launch Ampere by SRI GUDEM MAHIPAL REDDY</figcaption>
+        <img src="images/launch1.jpg" data-full="images/launch1.jpg" alt="Vehicle launch Ampere" class="dealership-img">
+        <figcaption>Vehicle launch Ampere by SRI GUDEM MAHIPAL REDDY GARU [MLA]</figcaption>
       </figure>
       <figure>
-        <img src="images/launch2.jpg" alt="Vehicle launch Oben" class="dealership-img">
-        <figcaption>Vehicle launch Oben by SRI ANJI REDDY</figcaption>
+        <img src="images/launch2.jpg" data-full="images/launch2.jpg" alt="Vehicle launch Oben" class="dealership-img">
+        <figcaption>Vehicle launch Oben by SRI C. ANJI REDDY GARU [MLC]</figcaption>
       </figure>
       <figure>
-        <img src="images/GuestFelicitation.jpg" alt="Guest Felicitation" class="dealership-img">
+        <img src="images/GuestFelicitation.jpg" data-full="images/GuestFelicitation.jpg" alt="Guest Felicitation" class="dealership-img">
         <figcaption>Guest Felicitation</figcaption>
       </figure>
       <figure>
-        <img src="images/ampere.jpg" alt="AMPERE Discussion" class="dealership-img">
+        <img src="images/ampere.jpg" data-full="images/ampere.jpg" alt="AMPERE Discussion" class="dealership-img">
         <figcaption>AMPERE Discussion</figcaption>
       </figure>
       <figure>
-        <img src="images/Oben.jpg" alt="OBEN Discussion" class="dealership-img">
+        <img src="images/Oben.jpg" data-full="images/Oben.jpg" alt="OBEN Discussion" class="dealership-img">
         <figcaption>OBEN Discussion</figcaption>
       </figure>
       <figure>
-        <img src="images/LocalLeadersGuest.jpg" alt="Local Leaders Guest" class="dealership-img">
+        <img src="images/LocalLeadersGuest.jpg" data-full="images/LocalLeadersGuest.jpg" alt="Local Leaders Guest" class="dealership-img">
         <figcaption>Local Leaders Guest</figcaption>
       </figure>
       <figure>
-        <img src="images/EV_AwarenessDiscussion.jpg" alt="EV Awareness Discussion" class="dealership-img">
+        <img src="images/EV_AwarenessDiscussion.jpg" data-full="images/EV_AwarenessDiscussion.jpg" alt="EV Awareness Discussion" class="dealership-img">
         <figcaption>EV Awareness Discussion</figcaption>
       </figure>
       <figure>
-        <img src="images/FriendsForever.jpg" alt="Friends Forever" class="dealership-img">
+        <img src="images/FriendsForever.jpg" data-full="images/FriendsForever.jpg" alt="Friends Forever" class="dealership-img">
         <figcaption>Friends Forever</figcaption>
       </figure>
     </div>
   </section>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <div class="lightbox-content">
+      <img src="" alt="">
+      <div class="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-next" aria-label="Next">›</button>
+  </div>
 
   <!-- Contact -->
   <section id="contact">
@@ -111,5 +122,6 @@
     <p>Phone: +91-9848158971</p>
   </section>
   <script src="scripts/nav.js" defer></script>
+  <script src="scripts/lightbox.js" defer></script>
 </body>
 </html>

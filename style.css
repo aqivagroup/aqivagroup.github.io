@@ -238,3 +238,71 @@ section h2 {
 @media (max-width: 767px) {
   body { background-attachment: scroll; }
 }
+
+/* Lightbox overlay: center floating window */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6); /* darker backdrop so window floats "in between" */
+  z-index: 2000;
+  padding: 20px;
+}
+
+.lightbox.open { display: flex; }
+
+/* Floating window */
+.lightbox-content {
+  width: 7in;
+  height: 5in;
+  max-width: calc(100% - 40px);
+  max-height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000; /* subtle background behind image */
+  border-radius: 8px;
+  box-shadow: 0 14px 50px rgba(0,0,0,0.6);
+  position: relative;
+}
+
+/* Ensure clicks inside the content don't close the overlay */
+.lightbox-content { pointer-events: auto; }
+.lightbox { pointer-events: auto; }
+
+/* Close button visually above the window */
+.lightbox-close {
+  z-index: 2100;
+}
+
+/* Ensure lightbox image always fits the floating window while keeping aspect ratio */
+.lightbox-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      /* fit inside box, preserve aspect */
+  object-position: center;
+  display: block;
+  max-width: none;
+  max-height: none;
+  image-rendering: auto;    /* let browser pick best interpolation */
+  -webkit-backface-visibility: hidden; /* reduce subpixel rendering issues on some browsers */
+}
+
+/* Responsive fallbacks */
+@media (max-width: 700px), (max-height: 520px) {
+  .lightbox-content {
+    width: calc(100% - 40px);
+    height: auto;
+    max-height: 85vh;
+  }
+  .lightbox-content img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: contain;
+  }
+}
